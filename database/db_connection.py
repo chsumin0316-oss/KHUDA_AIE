@@ -11,3 +11,10 @@ SessionFactory = sessionmaker(
     expire_on_commit=False,
     bind=engine,
 )
+
+def get_db():
+    db = SessionFactory()
+    try:
+        yield db
+    finally:
+        db.close()

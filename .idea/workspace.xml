@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82de044f-0950-4aea-b8b1-e6d6a69ffd0e" name="변경" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/orm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modles.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/db_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/db_connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordle.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

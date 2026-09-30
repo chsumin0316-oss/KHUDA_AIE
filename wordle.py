@@ -1,5 +1,7 @@
 from pydantic import BaseModel, Field
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
+from sqlalchemy.orm import Session
+from database.db_connection import get_db
 
 from database.db_connection import engine
 from database.orm import Base
@@ -19,12 +21,12 @@ class UserRequest(BaseModel):
 
 
 @app.post("/user")
-def user_word(request: UserRequest):
-    return process_user_word(request.user.upper(), request.attempt, request.game_id, request.user_id)
+def user_word(request: UserRequest, db: Session = Depends(get_db)):
+    return process_user_word(request.user.upper(), request.attempt, request.game_id, request.user_id,db)
 
 
 @app.get("/answer")
-def get_answer(game_id: int):
+def get_answer(game_id: int, db: Session = Depends(get_db)):
     return {
-        "정답": get_current_answer(game_id)
+        "정답": get_current_answer(game_id, db)
     }
